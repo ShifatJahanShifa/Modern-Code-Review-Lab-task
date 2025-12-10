@@ -55,7 +55,7 @@ def calculate_diversity_score(password):
     score = sum(categories_found.values())
 
     # ensure minimum score of 1 if password exists but contains only unknown chars
-    return max(score, 1)
+    return score
 
 
 
