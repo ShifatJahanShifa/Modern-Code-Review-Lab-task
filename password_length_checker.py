@@ -1,6 +1,10 @@
-from password_strength_constants import WEAK, MEDIUM, STRONG
+from password_strength_constants import WEAK, MEDIUM, STRONG, INVALID
 
 def check_password_strength(password, a, b):
+
+    if not isinstance(password, str) or password == "":
+        return INVALID
+     
     length = len(password)
 
     if length < a:
