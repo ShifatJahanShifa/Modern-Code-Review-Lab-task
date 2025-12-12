@@ -7,7 +7,7 @@ def check_password_strength(password: str, min_length : int, max_length: int) ->
     
     if not isinstance(min_length, int) or not isinstance(max_length, int):
         return INVALID
-    if min_length < 0 or max_length < 0 or min_length >= max_length:
+    if min_length < 0 or max_length < 0 or min_length > max_length:
         return INVALID
      
     length = len(password)
