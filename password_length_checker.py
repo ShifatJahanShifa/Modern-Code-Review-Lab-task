@@ -14,7 +14,7 @@ def check_password_strength(password: str, min_length : int, max_length: int) ->
 
     if length < min_length:
         return WEAK
-    elif min_length <= length <= max_length:
+    elif min_length <= length < max_length:
         return MEDIUM
     else:
         return STRONG
